@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/frontend-mentor-14/static/css/main.964cbb80.chunk.css",
+    "main.js": "/frontend-mentor-14/static/js/main.9b07d24a.chunk.js",
+    "main.js.map": "/frontend-mentor-14/static/js/main.9b07d24a.chunk.js.map",
+    "runtime-main.js": "/frontend-mentor-14/static/js/runtime-main.a138dcb3.js",
+    "runtime-main.js.map": "/frontend-mentor-14/static/js/runtime-main.a138dcb3.js.map",
+    "static/js/2.1501bab4.chunk.js": "/frontend-mentor-14/static/js/2.1501bab4.chunk.js",
+    "static/js/2.1501bab4.chunk.js.map": "/frontend-mentor-14/static/js/2.1501bab4.chunk.js.map",
+    "static/js/3.a540b958.chunk.js": "/frontend-mentor-14/static/js/3.a540b958.chunk.js",
+    "static/js/3.a540b958.chunk.js.map": "/frontend-mentor-14/static/js/3.a540b958.chunk.js.map",
+    "index.html": "/frontend-mentor-14/index.html",
+    "static/css/main.964cbb80.chunk.css.map": "/frontend-mentor-14/static/css/main.964cbb80.chunk.css.map",
+    "static/js/2.1501bab4.chunk.js.LICENSE.txt": "/frontend-mentor-14/static/js/2.1501bab4.chunk.js.LICENSE.txt",
+    "static/media/icon-ellipsis.a57a4ac8.svg": "/frontend-mentor-14/static/media/icon-ellipsis.a57a4ac8.svg",
+    "static/media/App.css": "/frontend-mentor-14/static/media/icon-work.a3f124e5.svg",
+    "static/media/image-jeremy.71cd41f1.png": "/frontend-mentor-14/static/media/image-jeremy.71cd41f1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a138dcb3.js",
+    "static/js/2.1501bab4.chunk.js",
+    "static/css/main.964cbb80.chunk.css",
+    "static/js/main.9b07d24a.chunk.js"
+  ]
+}
