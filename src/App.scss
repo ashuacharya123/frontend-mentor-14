@@ -1,3 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+@mixin before($color, $url) {
+  background-color: $color;
+  background-image: $url;
+  background-repeat: no-repeat;
+  background-position-x: 22rem;
+  background-position-y: -1rem;
+}
+
+// Colors
+
+// Primary
+
+$Blue: hsl(246, 80%, 60%); //(work)
+$Soft-blue: hsl(195, 74%, 62%); //(play)
+$Light-red: hsl(348, 100%, 68%); //(study)
+$Lime-green: hsl(145, 58%, 55%); //(exercise)
+$Violet: hsl(264, 64%, 52%); //(social)
+$Soft-orange: hsl(43, 84%, 65%); //(self care)
+
+// Neutral
+
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
+
+// ****************************************************************
+
 *,
 *::before,
 *::after {
@@ -8,4 +38,174 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: $Very-dark-blue;
+  color: white;
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  margin-top: 8rem;
+  height: auto;
+  width: 100%;
+}
+
+.content {
+  min-height: auto;
+  width: 88%;
+  margin: 0 auto;
+
+  &__upper {
+    height: 25rem;
+    width: 100%;
+    margin-bottom: 1.6rem;
+
+    &__top {
+      z-index: 0;
+      height: 13rem;
+      background-color: $Blue;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1.5rem;
+
+      h3 {
+        margin-left: 1.5em;
+        color: $Pale-Blue;
+        display: block;
+        font-weight: 400;
+        font-size: 1.5rem;
+        span {
+          color: #dfd8fb;
+          display: block;
+          font-size: 2.5rem;
+          font-weight: 300;
+          margin-top: 0.2rem;
+        }
+      }
+
+      img {
+        width: 6rem;
+        height: 6rem;
+        box-shadow: 0 0 0 3px white;
+        border-radius: 50%;
+      }
+    }
+
+    &__bottom {
+      margin-top: -1rem;
+      height: 8rem;
+      background-color: $Dark-blue;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      border-radius: 0 0 1.5rem 1.5rem;
+      span {
+        margin-top: 1rem;
+
+        font-size: 1.8rem;
+        color: $Desaturated-blue;
+        transition: all 0.2s;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__lower {
+    .card__container {
+      .card {
+        position: relative;
+        background-color: $Dark-blue;
+        margin-bottom: 6.5rem;
+        height: 12rem;
+        border-radius: 1.5rem;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        transition: all 0.2s;
+
+        &:hover,
+        &:active {
+          background-color: lighten($Dark-blue, 10%);
+        }
+
+        h2 {
+          align-self: end;
+          margin-left: 2.5rem;
+          font-size: 1.8rem;
+          font-weight: 500;
+          margin-bottom: 0.6rem;
+        }
+
+        img {
+          grid-area: 1/2/2/3;
+          justify-self: end;
+          align-self: center;
+          margin-right: 2em;
+          margin-top: 2rem;
+        }
+
+        span {
+          &:nth-of-type(1) {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-left: 2.5rem;
+          }
+          &:nth-of-type(2) {
+            justify-self: center;
+            color: $Pale-Blue;
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+          }
+        }
+
+        &:nth-of-type(1)::before {
+          @include before(#ff8b64, url(./images/icon-work.svg));
+        }
+
+        &:nth-of-type(2)::before {
+          @include before($Soft-blue, url(./images/icon-play.svg));
+        }
+
+        &:nth-of-type(3)::before {
+          @include before($Light-red, url(./images/icon-study.svg));
+        }
+
+        &:nth-of-type(4)::before {
+          @include before($Lime-green, url(./images/icon-exercise.svg));
+        }
+
+        &:nth-of-type(5)::before {
+          @include before($Violet, url(./images/icon-social.svg));
+        }
+
+        &:nth-of-type(6)::before {
+          @include before($Soft-orange, url(./images//icon-self-care.svg));
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 5rem;
+          display: inline-block;
+          z-index: -1;
+          top: -4rem;
+          border-radius: 1.5rem 1.5rem 0 0;
+        }
+      }
+    }
+  }
+}
+
+#white {
+  color: white;
 }
